@@ -10,8 +10,34 @@ This project was built around Apache Maven to manage the Java app dependencies. 
     .
     ├── pom.xml                                    # Configuration file for Apache Maven
     ├── src                   
-        ├── main
-            ├── java
-                ├── met_objects                    # Main package name
-                    ├── CountArtObjects.java       # Java project source code 
+    ├    ├── main
+    ├        ├── java
+    ├            ├── met_objects                   # Main package name
+    ├                ├── CountArtObjects.java      # Java project source code 
+    ├── target
+         ├── met-object-count-0.0.1.jar            # JAR file 
+                    
 ### Running Hadoop Jobs on Google Dataproc
+
+1. Compile the Java class files in your local machine using Maven (or another Java project management tool)
+   
+2. Copy the file to the Cloud Storage bucket of your project:
+
+        $ gsutil cp /home/usr/my_Maven_project/target/met-object-count-0.0.1.jar gs://${PROJECT}/hadoop_job_files
+
+3. Create a Dataproc cluster:
+
+        $ gcloud dataproc clusters create ${CLUSTER_NAME} \
+            --worker-machine-type n1-standard-4 \
+            --num-workers 0 \
+            --image-version 2.0.5-debian10 \
+            --region ${REGION} \
+            --max-idle=30m 
+
+4. Submit a Hadoop job to the Dataproc cluster:
+
+        $ gcloud dataproc jobs submit hadoop \
+            --jar gs://${PROJECT}/hadoop_job_files/met-object-count-0.0.1.jar \
+            --cluster ${CLUSTER_NAME} \
+             
+
