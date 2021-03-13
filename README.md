@@ -12,6 +12,6 @@ This project was built around Apache Maven to manage the Java app dependencies. 
     ├── src                   
         ├── main
             ├── java
-                ├── met_objects
+                ├── met_objects                    # Main package name
                     ├── CountArtObjects.java       # Java project source code 
 ### Running Hadoop Jobs on Google Dataproc
