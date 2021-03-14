@@ -14,6 +14,7 @@ This project was built around Apache Maven to manage the Java app dependencies. 
     ├        ├── java
     ├            ├── met_objects                   # Main package name
     ├                ├── CountArtObjects.java      # Java project source code 
+    ├                ├── TextArrayWritable.java    # Custom subclass extending ArrayWritable into a Text-type class
     ├── target
          ├── met-object-count-0.0.1.jar            # JAR file 
                     
