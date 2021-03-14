@@ -17,11 +17,11 @@ This project was built around Apache Maven to manage the Java app dependencies. 
     ├── target
          ├── met-object-count-0.0.1.jar            # JAR file 
                     
-### Running Hadoop Jobs on Google Dataproc
+### Running Hadoop Jobs on Google Dataproc using the Cloud SDK
 
 1. Compile the Java class files in your local machine using Maven (or another Java project management tool)
    
-2. Copy the JAR file to the Cloud Storage bucket of your project (this requires to have the Cloud SDK installed in your machine):
+2. Copy the JAR file to the Cloud Storage bucket of your project:
 
         $ gsutil cp /home/usr/my_Maven_project/target/met-object-count-0.0.1.jar gs://${PROJECT}/hadoop_job_files
 
