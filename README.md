@@ -42,4 +42,4 @@ This project was built around Apache Maven to manage the Java app dependencies. 
             --region ${REGION} \
             -- ${PROJECT} bigquery-public-data:the_met.objects ${OUTPUT_TABLE} gs://${PROJECT}/hadoop_job_files/output   # Hadoop job arguments
              
-
+5. Explore the results in the specified BigQuery output table
