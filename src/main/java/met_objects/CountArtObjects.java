@@ -2,7 +2,6 @@ package met_objects;
 
 import static com.google.cloud.hadoop.io.bigquery.BigQueryConfiguration.PROJECT_ID;
 import static com.google.cloud.hadoop.io.bigquery.BigQueryConfiguration.SELECTED_FIELDS;
-import static com.google.common.collect.Streams.stream;
 
 import com.google.cloud.hadoop.io.bigquery.BigQueryConfiguration;
 import com.google.cloud.hadoop.io.bigquery.BigQueryFileFormat;
