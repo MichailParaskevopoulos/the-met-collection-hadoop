@@ -33,7 +33,6 @@ public class CountArtObjects {
 
   public static class Map extends Mapper<LongWritable, JsonObject, Text, Text> {
 
-    private static final LongWritable ONE = new LongWritable(1);
     private Text department = new Text();
     private Text objectType = new Text();
     
