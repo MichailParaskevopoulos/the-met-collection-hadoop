@@ -37,7 +37,9 @@ This project was built around Apache Maven to manage the Java app dependencies. 
 4. Submit a Hadoop job to the Dataproc cluster:
 
         $ gcloud dataproc jobs submit hadoop \
-            --jar gs://${PROJECT}/hadoop_job_files/met-object-count-0.0.1.jar \
             --cluster ${CLUSTER_NAME} \
+            --jar gs://${PROJECT}/hadoop_job_files/met-object-count-0.0.1.jar \
+            --region ${REGION} \
+            -- ${PROJECT} bigquery-public-data:the_met.objects ${OUTPUT_TABLE} gs://${PROJECT}/hadoop_job_files/output   # Hadoop job arguments
              
 
