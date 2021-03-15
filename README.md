@@ -1,5 +1,5 @@
 # 🖼️ The MET Collection
-An implementation of Apache Hadoop to count the unique objects in every curatorial department of The Met collection using tools available on the Google Cloud Platform.
+An implementation of Apache Hadoop to count the unique objects in every curatorial department of The Met Collection using tools available on the Google Cloud Platform.
 
 ### Overview
 This project executes a MapReduce job with the [Hadoop BigQuery Connector](https://github.com/GoogleCloudDataproc/hadoop-connectors) to count the number of unique exhibit types in every deparment of The MET Collection. The data are sourced from the Objects table in [The Met Public Domain Art Works](https://console.cloud.google.com/marketplace/product/the-metropolitan-museum-of-art/the-met-public-domain-art-works) dataset that is hosted on Google BigQuery.
